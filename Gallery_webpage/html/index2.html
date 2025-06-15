@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventsy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            background-color: white;
+            padding: 20px 0;
+            border-bottom: 2px solid #333;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+        }
+
+        .logo {
+            border: 2px solid #333;
+            padding: 8px 16px;
+            font-size: 18px;
+            font-weight: normal;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav a {
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            position: relative;
+        }
+
+        .nav a:not(:last-child)::after {
+            content: "/";
+            margin-left: 15px;
+            color: #333;
+        }
+
+        .nav a:hover {
+            color: #666;
+        }
+
+        /* Main Content */
+        .main-content {
+            background-color: #f5f5f5;
+            padding: 60px 0;
+        }
+
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* Hero Image Section */
+        .hero-image {
+            width: 100%;
+            height: 400px;
+            background-image: linear-gradient(rgba(255,209,64,0.7),rgba(255,209,64,0.7)), 
+            url(../images/about.jpg);
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-image::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(244, 208, 63, 0.8), rgba(247, 220, 111, 0.6));
+            z-index: 1;
+        }
+
+        /* History Section */
+        .history-section {
+            margin-top: 40px;
+        }
+
+        .history-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #333;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .history-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #333;
+            text-align: justify;
+            font-style: italic;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #e74c3c;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .footer-logo {
+            border: 2px solid white;
+            padding: 8px 16px;
+            font-size: 18px;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 40px;
+        }
+
+        .contact-info {
+            margin-bottom: 50px;
+        }
+
+        .contact-info p {
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        /* Newsletter */
+        .newsletter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .newsletter input {
+            flex: 1;
+            padding: 15px 20px;
+            border: none;
+            font-size: 16px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            border-radius: 0;
+        }
+
+        .newsletter input::placeholder {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .newsletter button {
+            padding: 15px 30px;
+            background-color: white;
+            color: #e74c3c;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 0;
+        }
+
+        .newsletter button:hover {
+            background-color: #f8f8f8;
+        }
+
+        .copyright {
+            margin-top: 40px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo">eventsy</a>
+            <nav class="nav">
+                <a href="#">home</a>
+                <a href="#">about</a>
+                <a href="#">gallery</a>
+                <a href="#">blog</a>
+                <a href="#">contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-container">
+            <!-- Hero Image -->
+            <div class="hero-image"></div>
+
+            <!-- History Section -->
+            <section class="history-section">
+                <h2 class="history-title">OUR HISTORY:</h2>
+                <p class="history-text">
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <a href="#" class="footer-logo">eventsy</a>
+            
+            <div class="contact-info">
+                <p>420 Smoke St. Los Angeles, CA 46318</p>
+                <p>(213)-467-2627</p>
+                <p>info@eventsy.com</p>
+            </div>
+
+            <div class="newsletter">
+                <input type="email" placeholder="Enter your email to join newsletter...">
+                <button>SUBSCRIBE</button>
+            </div>
+
+            <p class="copyright">Copyright 2019 eventsy. All rights reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
